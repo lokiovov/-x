@@ -1,0 +1,34 @@
+SQL
+
+创建用户
+create user nzy identified by 123;
+
+授权
+grant connect,resource to nzy;
+
+创建表
+1.管理员 admin
+
+create table admin(
+id number(10) primary key,
+username varchar2(20) not null,
+password varchar2(20) not null
+);
+
+2.员工 staff
+
+create table staff（
+id number(10) primary key,
+username varchar2(20) not null,
+password varchar2(20) not null,
+name varchar2(20) not null,
+idcard number(20) not null,
+tel number(15) not null,
+dept varchar2(10) not null,
+job varchar2(10) not null,
+adminid number(10)
+);
+
+序列
+create sequence req;
+
